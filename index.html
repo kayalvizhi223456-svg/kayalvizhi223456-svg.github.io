@@ -240,8 +240,8 @@
         const protoSemWeeks = Array.from({ length: 20 }, (_, i) => ({
             week: i + 1,
             phase: Math.ceil((i + 1) / 5), // 5 weeks per phase
-            slug: `week-${(i + 1).toString().padStart(2, '0')}`,
-            status: "Coming Soon"
+            slug: i === 0 ? `week-01.html` : `#week-${(i + 1).toString().padStart(2, '0')}`,
+            status: i === 0 ? "Published" : "Coming Soon"
         }));
 
         function renderWeeks(phaseFilter) {
@@ -252,26 +252,21 @@
 
             filtered.forEach((w, index) => {
                 const num = w.week.toString().padStart(2, '0');
-                // Calculate staggered delay for animations
                 const delay = (index % 5) * 50;
+                const isPublished = w.status === "Published";
+
+                const tagHTML = isPublished
+                    ? `<span class="text-[10px] font-bold text-ocean-950 bg-ocean-400 px-3 py-1.5 rounded-md shadow-[0_0_10px_rgba(56,189,248,0.5)] transition-transform group-hover:scale-105">READ STORY</span>`
+                    : `<span class="text-[10px] font-semibold text-ocean-400 bg-ocean-950/80 px-2.5 py-1.5 rounded-md border border-ocean-700/50 opacity-80 group-hover:opacity-100 group-hover:bg-ocean-900 group-hover:border-ocean-500 transition-all flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-ocean-400 animate-pulse"></span>COMING SOON</span>`;
 
                 container.innerHTML += `
-                    <a href="#${w.slug}" data-aos="zoom-in" data-aos-delay="${delay}" class="group relative block bg-ocean-900/30 border border-ocean-800 rounded-2xl p-6 hover:border-ocean-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(14,165,233,0.15)] overflow-hidden">
-                        <!-- Hover glow effect -->
+                    <a href="${w.slug}" data-aos="zoom-in" data-aos-delay="${delay}" class="group relative block bg-ocean-900/30 border border-ocean-800 rounded-2xl p-6 hover:border-ocean-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(14,165,233,0.15)] overflow-hidden">
                         <div class="absolute -inset-1 bg-gradient-to-r from-ocean-500 to-ocean-400 opacity-0 group-hover:opacity-20 transition-opacity blur-lg"></div>
                         
                         <div class="relative z-10 flex flex-col h-full items-center justify-center text-center">
-                            <!-- Phase Badge -->
                             <span class="text-[10px] font-bold text-ocean-500/70 mb-3 tracking-widest uppercase border-b border-ocean-800 pb-1">Phase 0${w.phase}</span>
-                            
-                            <!-- Week Number -->
-                            <h4 class="text-xl font-extrabold text-white mb-4 group-hover:text-ocean-300 transition-colors">WEEK ${num}</h4>
-                            
-                            <!-- Coming Soon Tag -->
-                            <span class="text-[10px] font-semibold text-ocean-400 bg-ocean-950/80 px-2.5 py-1.5 rounded-md border border-ocean-700/50 opacity-80 group-hover:opacity-100 group-hover:bg-ocean-900 group-hover:border-ocean-500 transition-all flex items-center gap-1">
-                                <span class="w-1 h-1 rounded-full bg-ocean-400 animate-pulse"></span>
-                                COMING SOON
-                            </span>
+                            <h4 class="text-xl font-extrabold text-white mb-4 ${isPublished ? 'text-ocean-300' : 'group-hover:text-ocean-300'} transition-colors">WEEK ${num}</h4>
+                            ${tagHTML}
                         </div>
                     </a>
                 `;
