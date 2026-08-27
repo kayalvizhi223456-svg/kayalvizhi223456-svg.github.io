@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayalvizhi S - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0f8ff',
+                            100: '#e0f0fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-ocean-950 text-white font-sans min-h-screen selection:bg-ocean-400 selection:text-ocean-950">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-ocean-950/80 backdrop-blur-md border-b border-ocean-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter hover:text-ocean-400 transition-colors cursor-pointer">KS.</h1>
+            <div class="space-x-6 text-sm font-medium flex items-center">
+                <a href="#about" class="hover:text-ocean-400 transition-colors hidden sm:block">Journey</a>
+                <a href="#skills" class="hover:text-ocean-400 transition-colors hidden sm:block">Skills</a>
+                <a href="resume.html" target="_blank" class="px-4 py-2 bg-ocean-500 hover:bg-ocean-400 text-ocean-950 font-bold rounded-lg transition-transform transform hover:-translate-y-0.5">ATS Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (3D Floating Card) -->
+    <section class="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-ocean-500/20 rounded-full blur-[100px]"></div>
+        
+        <div data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15" data-aos="zoom-in" data-aos-duration="1200"
+             class="relative z-10 bg-ocean-900/50 backdrop-blur-xl border border-ocean-800 p-10 rounded-2xl shadow-2xl max-w-2xl w-full text-center">
+            <img src="https://ui-avatars.com/api/?name=Kayalvizhi+S&background=0284c7&color=fff&size=256" alt="Profile" class="w-28 h-28 mx-auto rounded-full border-2 border-ocean-500 shadow-[0_0_20px_rgba(14,165,233,0.3)] mb-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-400">
+                Hi, I'm Kayalvizhi S
+            </h1>
+            <p class="text-lg md:text-xl text-ocean-100 font-light mb-6 h-8" id="typed-text"></p>
+            <div class="flex justify-center gap-4">
+                <a href="https://github.com/kayalvizhi223456-svg" target="_blank" class="px-6 py-3 bg-ocean-800 hover:bg-ocean-700 rounded-lg font-semibold transition-all hover:scale-105 border border-ocean-600 shadow-md">GitHub</a>
+                <a href="https://www.linkedin.com/in/kayalvizhi-s-42968037b" target="_blank" class="px-6 py-3 bg-[#0077b5] hover:bg-[#005e93] rounded-lg font-semibold transition-all hover:scale-105 shadow-md">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+            
+            <div class="col-span-1 md:col-span-2 bg-ocean-900/40 p-8 rounded-2xl border border-ocean-800 hover:border-ocean-500/50 transition-colors shadow-lg" data-aos="fade-up">
+                <div class="text-ocean-400 mb-4 text-2xl">🎓</div>
+                <h3 class="text-xl font-bold mb-3">Education</h3>
+                <p class="text-ocean-100/90 leading-relaxed text-sm md:text-base">
+                    Currently pursuing a <strong>B.Sc. in Data Science</strong> at <strong>Kumaraguru College of Liberal Arts and Science</strong> (2025–2028). I'm intensely passionate about leveraging data to solve complex problems and am constantly working to expand my analytical skill set.
+                </p>
+            </div>
+
+            <div class="col-span-1 bg-ocean-900/40 p-8 rounded-2xl border border-ocean-800 hover:border-ocean-500/50 transition-colors shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-ocean-400 mb-4 text-2xl">🚀</div>
+                <h3 class="text-xl font-bold mb-3">Current Focus</h3>
+                <p class="text-ocean-100/90 leading-relaxed text-sm md:text-base">
+                    As an enthusiastic learner, my primary focus right now is deeply understanding foundational Data Science concepts, gaining hands-on coding experience, and exploring real-world data analysis.
+                </p>
+            </div>
+
+            <div id="skills" class="col-span-1 md:col-span-3 bg-gradient-to-br from-ocean-900/60 to-ocean-800/10 p-8 rounded-2xl border border-ocean-700 shadow-lg mt-2" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-bold mb-6 text-center text-ocean-100">Tech Stack & Skills</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Python</span>
+                    <span class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Excel</span>
+                    <span class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Statistics</span>
+                    <span class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Data Analysis</span>
+                    <span class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">DBMS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ocean-950/80 py-8 text-center text-ocean-400/50 text-sm border-t border-ocean-900/50">
+        <p>Built as a learning journey. © 2026 Kayalvizhi S</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 20 });
+
+        var typed = new Typed('#typed-text', {
+            strings: ['B.Sc. Data Science Student.', 'Passionate about Data.', 'Building skills in Python &amp; DBMS.'],
+            typeSpeed: 45,
+            backSpeed: 25,
+            loop: true,
+            showCursor: false
+        });
+    </script>
+</body>
+</html>
