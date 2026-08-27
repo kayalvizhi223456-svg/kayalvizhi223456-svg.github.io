@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             line-height: 1.5;
             padding: 20px;
         }
+
         .resume-container {
             max-width: 800px;
             margin: 0 auto;
@@ -20,29 +22,134 @@
             padding: 40px 50px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        h1 { margin: 0 0 10px 0; font-size: 2.2em; color: #111827; }
-        .contact-info { margin-bottom: 30px; font-size: 0.95em; color: #4b5563; }
-        .contact-info a { color: #2563eb; text-decoration: none; margin-right: 15px; }
-        .contact-info a:hover { text-decoration: underline; }
-        h2 { font-size: 1.3em; color: #1f2937; border-bottom: 2px solid #e5e7eb; padding-bottom: 5px; margin-top: 25px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.05em; }
-        ul { padding-left: 0px; margin-bottom: 20px; list-style-type: none; display: flex; flex-wrap: wrap; gap: 8px;}
-        li { background: #f3f4f6; padding: 6px 12px; border-radius: 4px; font-size: 0.95em; font-weight: 600; color: #374151;}
-        .job-title { font-weight: 600; color: #111827; font-size: 1.1em; }
-        .date { float: right; color: #6b7280; font-size: 0.95em; }
-        .location { color: #4b5563; padding-top: 2px; }
-        .summary { color: #374151; font-size: 0.95em; line-height: 1.6; }
-        
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+            color: #111827;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            color: #4b5563;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            color: #1f2937;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        ul.skills-list {
+            padding-left: 0px;
+            margin-bottom: 20px;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        ul.skills-list li {
+            background: #f3f4f6;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        ul.bullet-list {
+            padding-left: 20px;
+            list-style-type: disc;
+            margin-top: 8px;
+            color: #374151;
+            font-size: 0.95em;
+        }
+
+        ul.bullet-list li {
+            margin-bottom: 4px;
+            border: none;
+            background: transparent;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #111827;
+            font-size: 1.1em;
+        }
+
+        .date {
+            float: right;
+            color: #6b7280;
+            font-size: 0.95em;
+        }
+
+        .location {
+            color: #4b5563;
+            padding-top: 2px;
+        }
+
+        .summary {
+            color: #374151;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
         /* ATS and Print Settings Container */
         @media print {
-            @page { margin: 15mm; }
-            body { background: white; padding: 0; color: black; }
-            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
-            header, footer, .web-only { display: none !important; }
-            a { color: black; text-decoration: none; }
-            li { border: 1px solid #d1d5db; background: transparent; }
+            @page {
+                margin: 15mm;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+                color: black;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            header,
+            footer,
+            .web-only {
+                display: none !important;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            ul.skills-list li {
+                border: 1px solid #d1d5db;
+                background: transparent;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="resume-container">
         <h1>Kayalvizhi S</h1>
@@ -54,7 +161,22 @@
 
         <h2>Professional Summary</h2>
         <div class="summary">
-            A passionate and driven B.Sc. Data Science student focused on building a strong foundation in Python, Data Analysis, and database management. Eager to apply my learning, collaborate effectively, and continuously grow my technical abilities to build impactful data solutions.
+            A passionate and driven B.Sc. Data Science student focused on building a strong foundation in Python, Data
+            Analysis, and database management. Eager to apply my learning, collaborate effectively, and continuously
+            grow my technical abilities to build impactful data solutions.
+        </div>
+
+        <h2>Experience / Programmes</h2>
+        <div style="margin-bottom: 20px;">
+            <div><span class="job-title">Innovation Engineer Trainee, PRICE ProtoSem</span> <span
+                    class="date">Present</span></div>
+            <div class="location">20-Week Industry-Integrated Innovation Programme</div>
+            <ul class="bullet-list">
+                <li>Selected for a comprehensive innovation programme focused on solving real-world retail and commerce
+                    challenges.</li>
+                <li>Emphasizes practical application of AI, analytics, intelligent systems, IoT, prototyping, and
+                    entrepreneurship.</li>
+            </ul>
         </div>
 
         <h2>Education</h2>
@@ -64,7 +186,7 @@
         </div>
 
         <h2>Technical Skills</h2>
-        <ul>
+        <ul class="skills-list">
             <li>Python</li>
             <li>Excel</li>
             <li>Statistics</li>
@@ -77,4 +199,5 @@
         </div>
     </div>
 </body>
+
 </html>
