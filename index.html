@@ -12,29 +12,18 @@
             theme: {
                 extend: {
                     colors: {
-                        ocean: {
-                            50: '#f0f8ff',
-                            100: '#e0f0fe',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                            950: '#082f49',
-                        }
+                        ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' }
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Hide scrollbar for neatness */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -51,60 +40,94 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #0284c7;
         }
+
+        @keyframes blob {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            33% {
+                transform: translate(-50%, -55%) scale(1.05);
+            }
+
+            66% {
+                transform: translate(-45%, -50%) scale(0.95);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 8s infinite ease-in-out;
+        }
     </style>
 </head>
 
 <body class="bg-ocean-950 text-white font-sans min-h-screen selection:bg-ocean-400 selection:text-ocean-950">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800">
+    <nav class="fixed w-full z-50 top-0 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tighter hover:text-ocean-400 transition-colors cursor-pointer">KS.
-            </h1>
-            <div class="space-x-6 text-sm font-medium flex items-center">
+            <h1 class="text-xl font-bold tracking-tighter hover:text-ocean-400 transition-colors cursor-pointer"><i
+                    class="fas fa-rocket mr-2 text-ocean-500"></i>KS.</h1>
+            <div class="space-x-4 sm:space-x-6 text-sm font-medium flex items-center">
                 <a href="#about" class="hover:text-ocean-400 transition-colors hidden sm:block">Journey</a>
-                <a href="#skills" class="hover:text-ocean-400 transition-colors hidden sm:block">Skills</a>
+                <a href="#projects" class="hover:text-ocean-400 transition-colors hidden sm:block">Projects</a>
                 <a href="#protosem" class="hover:text-ocean-400 transition-colors hidden sm:block">ProtoSem</a>
+                <a href="#contact" class="hover:text-ocean-400 transition-colors hidden sm:block">Contact</a>
                 <a href="resume.html" target="_blank"
-                    class="px-4 py-2 bg-ocean-500 hover:bg-ocean-400 text-ocean-950 font-bold rounded-lg transition-transform transform hover:-translate-y-0.5">ATS
-                    Resume</a>
+                    class="px-4 py-2 bg-ocean-500 hover:bg-ocean-400 text-ocean-950 font-bold rounded-lg transition-transform transform hover:-translate-y-0.5 shadow-lg"><i
+                        class="fas fa-file-pdf mr-1"></i>Resume</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (3D Floating Card) -->
+    <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
         <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-ocean-500/20 rounded-full blur-[100px]">
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-ocean-500/20 rounded-full blur-[100px] animate-blob">
         </div>
 
-        <div data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15"
+        <div data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1"
             data-aos="zoom-in" data-aos-duration="1200"
-            class="relative z-10 bg-ocean-900/50 backdrop-blur-xl border border-ocean-800 p-10 rounded-2xl shadow-2xl max-w-2xl w-full text-center">
+            class="relative z-10 bg-ocean-900/40 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-2xl max-w-2xl w-full text-center group">
+            <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-ocean-500 to-ocean-400 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity blur duration-1000">
+            </div>
             <img src="https://ui-avatars.com/api/?name=Kayalvizhi+S&background=0284c7&color=fff&size=256" alt="Profile"
-                class="w-28 h-28 mx-auto rounded-full border-2 border-ocean-500 shadow-[0_0_20px_rgba(14,165,233,0.3)] mb-6 absolute left-1/2 -translate-x-1/2 -top-14">
-            <div class="mt-10"></div>
+                class="w-32 h-32 mx-auto rounded-full border-4 border-ocean-900 shadow-[0_0_30px_rgba(14,165,233,0.4)] mb-6 absolute left-1/2 -translate-x-1/2 -top-16">
+            <div class="mt-12"></div>
             <h1
-                class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-400">
+                class="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-ocean-100 to-ocean-400">
                 Hi, I'm Kayalvizhi S
             </h1>
-            <p class="text-lg md:text-xl text-ocean-100 font-light mb-6 h-8" id="typed-text"></p>
+            <p class="text-lg md:text-xl text-ocean-100 font-light mb-8 h-8" id="typed-text"></p>
             <div class="flex justify-center gap-4 mt-6">
                 <a href="https://github.com/kayalvizhi223456-svg" target="_blank"
-                    class="px-6 py-3 bg-ocean-800 hover:bg-ocean-700 rounded-lg font-semibold transition-all hover:scale-105 border border-ocean-600 shadow-md">GitHub</a>
+                    class="px-6 py-3 bg-ocean-900 hover:bg-ocean-800 rounded-lg font-semibold transition-all hover:-translate-y-1 border border-ocean-700 shadow-md flex items-center gap-2"><i
+                        class="fab fa-github text-xl"></i> GitHub</a>
                 <a href="https://www.linkedin.com/in/kayalvizhi-s-42968037b" target="_blank"
-                    class="px-6 py-3 bg-[#0077b5] hover:bg-[#005e93] rounded-lg font-semibold transition-all hover:scale-105 shadow-md">LinkedIn</a>
+                    class="px-6 py-3 bg-[#0077b5] hover:bg-[#005e93] rounded-lg font-semibold transition-all hover:-translate-y-1 shadow-md flex items-center gap-2"><i
+                        class="fab fa-linkedin text-xl"></i> LinkedIn</a>
             </div>
         </div>
     </section>
 
-    <!-- Bento Grid Section -->
-    <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+    <!-- About & Skills Bento -->
+    <section id="about" class="max-w-6xl mx-auto px-4 py-20 border-t border-ocean-800/30">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-ocean-400 uppercase tracking-widest text-sm font-bold"><i
+                    class="fas fa-map text-ocean-500 mr-2"></i>Background</span>
+            <h2 class="text-4xl font-extrabold mt-3 text-white">My Journey</h2>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
-
-            <div class="col-span-1 md:col-span-2 bg-ocean-900/40 p-8 rounded-2xl border border-ocean-800 hover:border-ocean-500/50 transition-colors shadow-lg"
+            <div class="col-span-1 md:col-span-2 bg-ocean-900/40 p-8 rounded-3xl border border-white/5 hover:border-ocean-500/50 transition-colors shadow-lg"
                 data-aos="fade-up">
-                <div class="text-ocean-400 mb-4 text-2xl">🎓</div>
+                <div
+                    class="text-ocean-400 mb-4 text-2xl bg-ocean-950 w-12 h-12 flex items-center justify-center rounded-xl shadow-inner shadow-ocean-500/20">
+                    <i class="fas fa-graduation-cap"></i></div>
                 <h3 class="text-xl font-bold mb-3">Education</h3>
                 <p class="text-ocean-100/90 leading-relaxed text-sm md:text-base">
                     Currently pursuing a <strong>B.Sc. in Data Science</strong> at <strong>Kumaraguru College of Liberal
@@ -112,101 +135,143 @@
                     complex problems and am constantly working to expand my analytical skill set.
                 </p>
             </div>
-
-            <div class="col-span-1 bg-ocean-900/40 p-8 rounded-2xl border border-ocean-800 hover:border-ocean-500/50 transition-colors shadow-lg"
+            <div class="col-span-1 bg-ocean-900/40 p-8 rounded-3xl border border-white/5 hover:border-ocean-500/50 transition-colors shadow-lg"
                 data-aos="fade-up" data-aos-delay="100">
-                <div class="text-ocean-400 mb-4 text-2xl">🚀</div>
-                <h3 class="text-xl font-bold mb-3">Current Focus</h3>
+                <div
+                    class="text-ocean-400 mb-4 text-2xl bg-ocean-950 w-12 h-12 flex items-center justify-center rounded-xl shadow-inner shadow-ocean-500/20">
+                    <i class="fas fa-rocket"></i></div>
+                <h3 class="text-xl font-bold mb-3">Focus</h3>
                 <p class="text-ocean-100/90 leading-relaxed text-sm md:text-base">
                     As an enthusiastic learner, my primary focus right now is deeply understanding foundational Data
-                    Science concepts, gaining hands-on coding experience, and exploring real-world data analysis.
+                    Science concepts, gaining hands-on coding experience, and exploring data analysis.
                 </p>
             </div>
 
             <div id="skills"
-                class="col-span-1 md:col-span-3 bg-gradient-to-br from-ocean-900/60 to-ocean-800/10 p-8 rounded-2xl border border-ocean-700 shadow-lg mt-2"
+                class="col-span-1 md:col-span-3 bg-gradient-to-br from-ocean-900/60 to-ocean-800/20 p-10 rounded-3xl border border-white/5 shadow-lg mt-2 relative overflow-hidden"
                 data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-2xl font-bold mb-6 text-center text-ocean-100">Tech Stack & Skills</h3>
-                <div class="flex flex-wrap justify-center gap-3">
+                <div
+                    class="absolute -right-20 -bottom-20 text-ocean-800/30 text-[15rem] leading-none pointer-events-none">
+                    <i class="fas fa-code"></i></div>
+                <h3 class="text-2xl font-bold mb-8 text-center text-white relative z-10">Tech Stack & Skills</h3>
+                <div class="flex flex-wrap justify-center gap-4 relative z-10">
                     <span
-                        class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Python</span>
+                        class="flex items-center gap-2 px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600/50 shadow-sm hover:border-ocean-300 hover:shadow-ocean-400/50 hover:-translate-y-1 transition-all font-medium"><i
+                            class="fab fa-python text-blue-400 text-lg"></i> Python</span>
                     <span
-                        class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Excel</span>
+                        class="flex items-center gap-2 px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600/50 shadow-sm hover:border-ocean-300 hover:shadow-ocean-400/50 hover:-translate-y-1 transition-all font-medium"><i
+                            class="fas fa-file-excel text-green-500 text-lg"></i> Excel</span>
                     <span
-                        class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Statistics</span>
+                        class="flex items-center gap-2 px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600/50 shadow-sm hover:border-ocean-300 hover:shadow-ocean-400/50 hover:-translate-y-1 transition-all font-medium"><i
+                            class="fas fa-chart-line text-purple-400 text-lg"></i> Statistics</span>
                     <span
-                        class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">Data
-                        Analysis</span>
+                        class="flex items-center gap-2 px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600/50 shadow-sm hover:border-ocean-300 hover:shadow-ocean-400/50 hover:-translate-y-1 transition-all font-medium"><i
+                            class="fas fa-database text-yellow-500 text-lg"></i> Data Analysis</span>
                     <span
-                        class="px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600 shadow-sm font-medium">DBMS</span>
+                        class="flex items-center gap-2 px-5 py-2.5 bg-ocean-950/80 rounded-xl text-ocean-100 border border-ocean-600/50 shadow-sm hover:border-ocean-300 hover:shadow-ocean-400/50 hover:-translate-y-1 transition-all font-medium"><i
+                            class="fas fa-server text-gray-300 text-lg"></i> DBMS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 py-20 border-t border-ocean-800/30">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-ocean-400 uppercase tracking-widest text-sm font-bold"><i
+                    class="fas fa-code-branch text-ocean-500 mr-2"></i>Portfolio</span>
+            <h2 class="text-4xl font-extrabold mt-3 mb-6 text-white">Featured Projects</h2>
+            <p class="text-ocean-100/70 max-w-2xl mx-auto text-lg">A showcase of my recent learning projects in data
+                science and analytics.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div data-aos="fade-up" data-aos-delay="0"
+                class="group relative bg-ocean-900/30 border border-white/5 rounded-3xl p-8 hover:border-ocean-400 transition-all duration-500 overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)]">
+                <div
+                    class="absolute -right-4 -top-4 bg-ocean-500/10 w-32 h-32 rounded-full blur-[40px] group-hover:bg-ocean-500/20 transition-colors">
+                </div>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-center mb-6">
+                        <i
+                            class="fas fa-folder-open text-4xl text-ocean-400 group-hover:scale-110 transition-transform"></i>
+                        <a href="https://github.com/kayalvizhi223456-svg" target="_blank"
+                            class="text-ocean-100 hover:text-ocean-400 transition-colors"><i
+                                class="fab fa-github text-2xl"></i></a>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">E-Commerce Data Analysis</h3>
+                    <p class="text-ocean-100/80 mb-6 leading-relaxed">Exploratory data analysis of an online retail
+                        dataset using Python and Pandas to uncover sales trends and discover customer insights.</p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-ocean-300">
+                        <span class="bg-ocean-950/80 px-3 py-1 rounded-md border border-ocean-700/50">Python</span>
+                        <span class="bg-ocean-950/80 px-3 py-1 rounded-md border border-ocean-700/50">Pandas</span>
+                        <span class="bg-ocean-950/80 px-3 py-1 rounded-md border border-ocean-700/50">Excel</span>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="group relative bg-ocean-900/30 border border-white/5 rounded-3xl p-8 hover:border-ocean-400 transition-all duration-500 overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)]">
+                <div
+                    class="absolute -right-4 -top-4 bg-ocean-500/10 w-32 h-32 rounded-full blur-[40px] group-hover:bg-ocean-500/20 transition-colors">
+                </div>
+                <div class="relative z-10">
+                    <div class="flex justify-between items-center mb-6">
+                        <i
+                            class="fas fa-folder-open text-4xl text-ocean-400 group-hover:scale-110 transition-transform"></i>
+                        <a href="https://github.com/kayalvizhi223456-svg" target="_blank"
+                            class="text-ocean-100 hover:text-ocean-400 transition-colors"><i
+                                class="fab fa-github text-2xl"></i></a>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Student Records System</h3>
+                    <p class="text-ocean-100/80 mb-6 leading-relaxed">Designed and implemented a basic relational
+                        database system to manage imaginary student records, applying core DBMS principles and SQL.</p>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono text-ocean-300">
+                        <span class="bg-ocean-950/80 px-3 py-1 rounded-md border border-ocean-700/50">SQL</span>
+                        <span class="bg-ocean-950/80 px-3 py-1 rounded-md border border-ocean-700/50">DBMS</span>
+                        <span class="bg-ocean-950/80 px-3 py-1 rounded-md border border-ocean-700/50">Data
+                            Modeling</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ProtoSem Section -->
-    <section id="protosem" class="max-w-6xl mx-auto px-4 py-24 border-t border-ocean-800/50">
+    <section id="protosem" class="max-w-6xl mx-auto px-4 py-20 border-t border-ocean-800/30">
         <div class="text-center mb-16" data-aos="fade-up">
             <span
-                class="inline-block px-3 py-1 rounded bg-ocean-900 text-ocean-400 uppercase tracking-widest text-xs font-bold mb-4 shadow">Innovation
-                Engineer Trainee</span>
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-ocean-900 border border-ocean-700 text-ocean-400 uppercase tracking-widest text-xs font-bold mb-4 shadow"><i
+                    class="fas fa-flask"></i>Innovation Trainee</span>
             <h2
                 class="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300">
                 PRICE ProtoSem</h2>
 
-            <p class="text-ocean-100 max-w-3xl mx-auto text-lg leading-relaxed">
-                Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and
-                commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and
-                entrepreneurship.<br><br>
-                Working with industry problem statements to explore, develop, and validate practical technology
-                solutions beyond conventional classroom learning.
+            <p class="text-ocean-100/80 max-w-3xl mx-auto text-lg leading-relaxed">
+                A 20-week industry-integrated innovation programme focused on solving real-world retail and commerce
+                challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
             </p>
-
-            <!-- Domain Tags -->
-            <div class="flex flex-wrap justify-center gap-3 mt-8">
-                <span
-                    class="px-4 py-2 rounded-full border border-ocean-500/30 text-ocean-300 text-sm bg-ocean-900/50 shadow-sm hover:border-ocean-400 transition-colors">Phygital
-                    Retail & Intelligent Commerce</span>
-                <span
-                    class="px-4 py-2 rounded-full border border-ocean-500/30 text-ocean-300 text-sm bg-ocean-900/50 shadow-sm hover:border-ocean-400 transition-colors">AI
-                    & Analytics</span>
-                <span
-                    class="px-4 py-2 rounded-full border border-ocean-500/30 text-ocean-300 text-sm bg-ocean-900/50 shadow-sm hover:border-ocean-400 transition-colors">Intelligent
-                    Systems & IoT</span>
-                <span
-                    class="px-4 py-2 rounded-full border border-ocean-500/30 text-ocean-300 text-sm bg-ocean-900/50 shadow-sm hover:border-ocean-400 transition-colors">Prototyping</span>
-                <span
-                    class="px-4 py-2 rounded-full border border-ocean-500/30 text-ocean-300 text-sm bg-ocean-900/50 shadow-sm hover:border-ocean-400 transition-colors">Entrepreneurship</span>
-            </div>
         </div>
 
         <!-- 20 Week Journey -->
-        <div data-aos="fade-up" data-aos-delay="100" class="mt-20">
-
-            <!-- Overall Progress Visualizer -->
-            <div
-                class="text-center text-ocean-400/80 mb-10 text-xs sm:text-sm font-mono tracking-widest hidden sm:block">
-                <span>01</span> <span class="text-ocean-800">━━━━━━━</span> <span>05</span> <span
-                    class="text-ocean-800">━━━━━━━</span> <span>10</span> <span class="text-ocean-800">━━━━━━━</span>
-                <span>15</span> <span class="text-ocean-800">━━━━━━━</span> <span>20</span>
-            </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="mt-16">
 
             <!-- Phase Navigation -->
             <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10" id="phase-nav">
                 <button onclick="filterPhase('all', this)"
-                    class="phase-btn active px-6 py-2 rounded-lg font-bold transition-all bg-ocean-500 text-ocean-950 shadow-[0_0_15px_rgba(14,165,233,0.3)]">ALL
+                    class="phase-btn active px-6 py-2 rounded-xl font-bold transition-all bg-ocean-400 text-ocean-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]">ALL
                     WEEKS</button>
                 <button onclick="filterPhase(1, this)"
-                    class="phase-btn px-6 py-2 rounded-lg font-bold transition-all bg-ocean-900 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
+                    class="phase-btn px-6 py-2 rounded-xl font-bold transition-all bg-ocean-900/80 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
                     01</button>
                 <button onclick="filterPhase(2, this)"
-                    class="phase-btn px-6 py-2 rounded-lg font-bold transition-all bg-ocean-900 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
+                    class="phase-btn px-6 py-2 rounded-xl font-bold transition-all bg-ocean-900/80 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
                     02</button>
                 <button onclick="filterPhase(3, this)"
-                    class="phase-btn px-6 py-2 rounded-lg font-bold transition-all bg-ocean-900 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
+                    class="phase-btn px-6 py-2 rounded-xl font-bold transition-all bg-ocean-900/80 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
                     03</button>
                 <button onclick="filterPhase(4, this)"
-                    class="phase-btn px-6 py-2 rounded-lg font-bold transition-all bg-ocean-900 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
+                    class="phase-btn px-6 py-2 rounded-xl font-bold transition-all bg-ocean-900/80 text-ocean-100 hover:bg-ocean-800 border border-ocean-700">PHASE
                     04</button>
             </div>
 
@@ -217,8 +282,47 @@
         </div>
     </section>
 
-    <footer class="bg-ocean-950/80 py-8 text-center text-ocean-400/50 text-sm border-t border-ocean-900/50 mt-12">
-        <p>Built as a learning journey. © 2026 Kayalvizhi S</p>
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-4 py-24 text-center border-t border-ocean-800/30">
+        <div data-aos="zoom-in"
+            class="bg-gradient-to-br from-ocean-900/80 to-ocean-800/20 p-12 lg:p-16 rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-ocean-500/20 rounded-full blur-[60px] animate-blob">
+            </div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-ocean-400/10 rounded-full blur-[60px] animate-blob"
+                style="animation-delay: 4s;"></div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="w-20 h-20 bg-ocean-950/80 rounded-2xl flex items-center justify-center mb-6 shadow-inner shadow-ocean-500/30 border border-ocean-800">
+                    <i
+                        class="fas fa-paper-plane text-4xl text-ocean-400 drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]"></i>
+                </div>
+                <h2 class="text-4xl font-extrabold mb-4 text-white">Let's Connect!</h2>
+                <p class="text-ocean-100/80 text-lg mb-10 max-w-lg mx-auto leading-relaxed">Whether you have a question,
+                    an opportunity, or just want to say hi, my inbox is always open for discussion.</p>
+
+                <button onclick="copyEmail()" id="copy-btn"
+                    class="px-8 py-4 bg-ocean-500 hover:bg-ocean-400 text-ocean-950 font-bold rounded-2xl transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(14,165,233,0.3)] flex items-center justify-center gap-3 w-full sm:w-auto overflow-hidden relative group">
+                    <div
+                        class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    </div>
+                    <i class="fas fa-envelope relative z-10"></i>
+                    <span id="copy-text" class="relative z-10">kayalvizhi223456@gmail.com</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ocean-950 flex flex-col items-center py-10 text-center border-t border-ocean-900/50 mt-12 gap-4">
+        <div class="flex gap-4 mb-2">
+            <a href="https://github.com/kayalvizhi223456-svg" target="_blank"
+                class="w-10 h-10 bg-ocean-900 rounded-full flex items-center justify-center text-ocean-400 hover:bg-ocean-400 hover:text-ocean-950 transition-colors"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kayalvizhi-s-42968037b" target="_blank"
+                class="w-10 h-10 bg-ocean-900 rounded-full flex items-center justify-center text-ocean-400 hover:bg-[#0077b5] hover:text-white transition-colors"><i
+                    class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="text-ocean-400/50 text-sm">Designed & Built with passion. © 2026 Kayalvizhi S</p>
     </footer>
 
     <!-- Scripts -->
@@ -233,13 +337,14 @@
             typeSpeed: 45,
             backSpeed: 25,
             loop: true,
-            showCursor: false
+            showCursor: true,
+            cursorChar: '|'
         });
 
         // ProtoSem Weeks Generation
         const protoSemWeeks = Array.from({ length: 20 }, (_, i) => ({
             week: i + 1,
-            phase: Math.ceil((i + 1) / 5), // 5 weeks per phase
+            phase: Math.ceil((i + 1) / 5),
             slug: i === 0 ? `week-01.html` : `#week-${(i + 1).toString().padStart(2, '0')}`,
             status: i === 0 ? "Published" : "Coming Soon"
         }));
@@ -256,16 +361,16 @@
                 const isPublished = w.status === "Published";
 
                 const tagHTML = isPublished
-                    ? `<span class="text-[10px] font-bold text-ocean-950 bg-ocean-400 px-3 py-1.5 rounded-md shadow-[0_0_10px_rgba(56,189,248,0.5)] transition-transform group-hover:scale-105">READ STORY</span>`
-                    : `<span class="text-[10px] font-semibold text-ocean-400 bg-ocean-950/80 px-2.5 py-1.5 rounded-md border border-ocean-700/50 opacity-80 group-hover:opacity-100 group-hover:bg-ocean-900 group-hover:border-ocean-500 transition-all flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-ocean-400 animate-pulse"></span>COMING SOON</span>`;
+                    ? `<span class="text-[10px] font-bold text-ocean-950 bg-ocean-400 px-3 py-1.5 rounded-md shadow-[0_0_10px_rgba(56,189,248,0.5)] transition-transform group-hover:scale-105 flex items-center gap-1"><i class="fas fa-book-open"></i> READ STORY</span>`
+                    : `<span class="text-[10px] font-semibold text-ocean-400 bg-ocean-950/80 px-2.5 py-1.5 rounded-md border border-ocean-700/50 opacity-80 group-hover:opacity-100 group-hover:bg-ocean-900 group-hover:border-ocean-500 transition-all flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-ocean-400 animate-pulse"></span>COMING SOON</span>`;
 
                 container.innerHTML += `
-                    <a href="${w.slug}" data-aos="zoom-in" data-aos-delay="${delay}" class="group relative block bg-ocean-900/30 border border-ocean-800 rounded-2xl p-6 hover:border-ocean-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(14,165,233,0.15)] overflow-hidden">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-ocean-500 to-ocean-400 opacity-0 group-hover:opacity-20 transition-opacity blur-lg"></div>
+                    <a href="${w.slug}" data-aos="zoom-in" data-aos-delay="${delay}" class="group relative block bg-ocean-900/30 border border-white/5 rounded-2xl p-6 hover:border-ocean-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(14,165,233,0.15)] overflow-hidden">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-ocean-500 to-ocean-400 opacity-0 group-hover:opacity-15 transition-opacity blur-lg"></div>
                         
                         <div class="relative z-10 flex flex-col h-full items-center justify-center text-center">
                             <span class="text-[10px] font-bold text-ocean-500/70 mb-3 tracking-widest uppercase border-b border-ocean-800 pb-1">Phase 0${w.phase}</span>
-                            <h4 class="text-xl font-extrabold text-white mb-4 ${isPublished ? 'text-ocean-300' : 'group-hover:text-ocean-300'} transition-colors">WEEK ${num}</h4>
+                            <h4 class="text-xl font-extrabold text-white mb-4 ${isPublished ? 'text-ocean-300 drop-shadow-[0_0_5px_rgba(56,189,248,0.5)]' : 'group-hover:text-ocean-300'} transition-colors">WEEK ${num}</h4>
                             ${tagHTML}
                         </div>
                     </a>
@@ -275,18 +380,37 @@
 
         window.filterPhase = function (phase, element) {
             document.querySelectorAll('.phase-btn').forEach(btn => {
-                btn.classList.remove('bg-ocean-500', 'text-ocean-950', 'shadow-[0_0_15px_rgba(14,165,233,0.3)]');
-                btn.classList.add('bg-ocean-900', 'text-ocean-100');
+                btn.classList.remove('bg-ocean-400', 'text-ocean-950', 'shadow-[0_0_15px_rgba(56,189,248,0.4)]');
+                btn.classList.add('bg-ocean-900/80', 'text-ocean-100');
             });
-            element.classList.remove('bg-ocean-900', 'text-ocean-100');
-            element.classList.add('bg-ocean-500', 'text-ocean-950', 'shadow-[0_0_15px_rgba(14,165,233,0.3)]');
+            element.classList.remove('bg-ocean-900/80', 'text-ocean-100');
+            element.classList.add('bg-ocean-400', 'text-ocean-950', 'shadow-[0_0_15px_rgba(56,189,248,0.4)]');
 
-            // Re-render
             renderWeeks(phase);
         };
 
-        // Initial Render
         renderWeeks('all');
+
+        // Copy Email Logic
+        function copyEmail() {
+            navigator.clipboard.writeText('kayalvizhi223456@gmail.com').then(() => {
+                const btn = document.getElementById('copy-btn');
+                const text = document.getElementById('copy-text');
+                const originalText = text.innerText;
+                text.innerText = 'Copied to Clipboard!';
+                btn.classList.replace('bg-ocean-500', 'bg-green-400');
+                btn.classList.replace('hover:bg-ocean-400', 'hover:bg-green-300');
+                btn.classList.add('shadow-[0_0_20px_rgba(74,222,128,0.5)]');
+                setTimeout(() => {
+                    text.innerText = originalText;
+                    btn.classList.replace('bg-green-400', 'bg-ocean-500');
+                    btn.classList.replace('hover:bg-green-300', 'hover:bg-ocean-400');
+                    btn.classList.remove('shadow-[0_0_20px_rgba(74,222,128,0.5)]');
+                }, 2500);
+            }).catch(() => {
+                alert("Failed to copy text. Please use kayalvizhi223456@gmail.com");
+            });
+        }
     </script>
 </body>
 
