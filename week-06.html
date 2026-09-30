@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - ProtoSem Journey | Kayalvizhi S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 400: '#38bdf8', 500: '#0ea5e9', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ocean-950 text-white font-sans min-h-screen">
+    <!-- Navbar -->
+    <nav class="w-full z-50 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html#protosem"
+                class="text-ocean-400 hover:text-white transition-colors flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
+                &larr; Back to Journey
+            </a>
+        </div>
+    </nav>
+
+    <article class="max-w-5xl mx-auto px-4 py-16" data-aos="fade-up">
+        <header class="mb-16 text-center">
+            <span class="text-ocean-400 font-bold tracking-widest uppercase text-sm mb-4 block"><i
+                    class="fas fa-layer-group mr-2"></i>Phase 02 • Week 06</span>
+            <h1
+                class="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300">
+                Digital Fabrication & Prototyping</h1>
+            <p class="text-ocean-100/70 italic text-lg max-w-2xl mx-auto mb-8">Exploring the fascinating world of
+                Additive Manufacturing and Laser Cutting.</p>
+        </header>
+
+        <!-- Laser Cutting Section -->
+        <section class="mb-20">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div
+                    class="w-full md:w-1/2 rounded-3xl bg-ocean-900/50 border border-ocean-800 overflow-hidden shadow-[0_10px_30px_rgba(14,165,233,0.1)] group flex-shrink-0 aspect-square flex items-center justify-center relative">
+                    <img src="laser-cutting.png" alt="Peach Laser Cut Design"
+                        class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                        onerror="this.outerHTML='<div class=\'text-ocean-400/50 text-sm flex flex-col items-center\'><i class=\'fas fa-image text-4xl mb-4\'></i>Please upload laser-cutting.png (The Peach) to GitHub!</div>'">
+                </div>
+                <div class="w-full md:w-1/2 prose prose-invert prose-ocean max-w-none">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center gap-3 text-white"><i
+                            class="fas fa-fire text-ocean-500"></i> Laser Cutting</h2>
+                    <h3 class="text-xl text-ocean-300 font-semibold mb-6">Custom Keychain Design</h3>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs font-mono">
+                        <span
+                            class="bg-ocean-900 px-3 py-1.5 rounded text-ocean-100 border border-ocean-700 shadow-inner">Software:
+                            RDWorks V8</span>
+                        <span
+                            class="bg-ocean-900 px-3 py-1.5 rounded text-ocean-100 border border-ocean-700 shadow-inner">Domain:
+                            Digital Fabrication</span>
+                    </div>
+                    <p class="text-ocean-100/90 leading-relaxed mb-4 text-base">
+                        As part of an individual hands-on activity, I designed and created a custom keychain using
+                        laser-cutting technology. I used <strong>RDWorks V8</strong> to develop the artwork and
+                        configure it for laser cutting.
+                    </p>
+                    <p class="text-ocean-100/90 leading-relaxed mb-6 text-base">
+                        The digital design was then transferred to the machine to produce the physical keychain,
+                        providing exposure to how computer-generated designs transform into tangible products.
+                    </p>
+                    <div class="p-6 bg-ocean-900/30 border border-ocean-800/50 rounded-2xl">
+                        <h4 class="text-white font-bold mb-3 flex items-center gap-2 text-lg"><i
+                                class="fas fa-check-circle text-ocean-400"></i> Key Skills Gained</h4>
+                        <ul class="text-ocean-100/80 space-y-2 text-sm pl-4 list-disc marker:text-ocean-500">
+                            <li>Basic design creation using RDWorks V8.</li>
+                            <li>Understanding the laser-cutting workflow.</li>
+                            <li>Preparing digital files for machine execution.</li>
+                            <li>Converting a digital design into a physical product.</li>
+                            <li>Developing creativity and precision.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Printing Section -->
+        <section class="mb-16">
+            <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+                <div
+                    class="w-full md:w-1/2 rounded-3xl bg-ocean-900/50 border border-ocean-800 overflow-hidden shadow-[0_10px_30px_rgba(14,165,233,0.1)] group flex-shrink-0 aspect-square flex items-center justify-center relative">
+                    <img src="3d-printing.png" alt="Dog 3D Model"
+                        class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                        onerror="this.outerHTML='<div class=\'text-ocean-400/50 text-sm flex flex-col items-center\'><i class=\'fas fa-cube text-4xl mb-4\'></i>Please upload 3d-printing.png (The Dog) to GitHub!</div>'">
+                </div>
+                <div class="w-full md:w-1/2 prose prose-invert prose-ocean max-w-none">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center gap-3 text-white"><i
+                            class="fas fa-cubes text-ocean-500"></i> 3D Printing</h2>
+                    <h3 class="text-xl text-ocean-300 font-semibold mb-6">Design and Fabrication</h3>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs font-mono">
+                        <span
+                            class="bg-ocean-900 px-3 py-1.5 rounded text-ocean-100 border border-ocean-700 shadow-inner">Software:
+                            Bambu Studio</span>
+                        <span
+                            class="bg-ocean-900 px-3 py-1.5 rounded text-ocean-100 border border-ocean-700 shadow-inner">Domain:
+                            Additive Manufacturing</span>
+                    </div>
+                    <p class="text-ocean-100/90 leading-relaxed mb-4 text-base">
+                        I explored the fascinating process of 3D printing by preparing a digital model and transforming
+                        it into a physical object. Using <strong>Bambu Studio</strong>, I imported and positioned the 3D
+                        model (a dog), configured printing parameters, and generated the sliced file.
+                    </p>
+                    <p class="text-ocean-100/90 leading-relaxed mb-6 text-base">
+                        This activity provided hands-on workflow experience, teaching me how objects are created layer
+                        by layer and applying 3D printing in product prototyping.
+                    </p>
+                    <div class="p-6 bg-ocean-900/30 border border-ocean-800/50 rounded-2xl">
+                        <h4 class="text-white font-bold mb-3 flex items-center gap-2 text-lg"><i
+                                class="fas fa-check-circle text-ocean-400"></i> Key Skills Gained</h4>
+                        <ul class="text-ocean-100/80 space-y-2 text-sm pl-4 list-disc marker:text-ocean-500">
+                            <li>Basic operation of Bambu Studio.</li>
+                            <li>3D model preparation and positioning.</li>
+                            <li>Understanding slicing and layer-by-layer printing.</li>
+                            <li>Familiarity with 3D printing parameters.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="pt-10 border-t border-ocean-800/50 flex flex-wrap gap-3 font-mono justify-center">
+            <span
+                class="text-ocean-400 bg-ocean-900/40 border border-ocean-700/50 px-4 py-1.5 rounded-lg text-sm">#PRICE</span>
+            <span
+                class="text-ocean-400 bg-ocean-900/40 border border-ocean-700/50 px-4 py-1.5 rounded-lg text-sm">#DigitalFabrication</span>
+            <span
+                class="text-ocean-400 bg-ocean-900/40 border border-ocean-700/50 px-4 py-1.5 rounded-lg text-sm">#LaserCutting</span>
+            <span
+                class="text-ocean-400 bg-ocean-900/40 border border-ocean-700/50 px-4 py-1.5 rounded-lg text-sm">#3DPrinting</span>
+            <span
+                class="text-ocean-400 bg-ocean-900/40 border border-ocean-700/50 px-4 py-1.5 rounded-lg text-sm">#Week06</span>
+        </div>
+    </article>
+
+    <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">
+        <p class="text-ocean-400/30 text-xs tracking-widest uppercase font-bold">Built as a learning journey. © 2026
+            Kayalvizhi S</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 20 });</script>
+</body>
+
+</html>
