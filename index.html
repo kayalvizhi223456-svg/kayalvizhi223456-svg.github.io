@@ -347,11 +347,12 @@
         // ProtoSem Weeks Generation (Including Week 00)
         const protoSemWeeks = Array.from({ length: 21 }, (_, i) => {
             const w = i; // Week 00 to 20
+            const isPublished = w === 0 || w === 5;
             return {
                 week: w,
                 phase: w === 0 ? 1 : Math.ceil(w / 5),
-                slug: w === 0 ? `week-00.html` : `#week-${w.toString().padStart(2, '0')}`,
-                status: w === 0 ? "Published" : "Coming Soon"
+                slug: isPublished ? `week-${w.toString().padStart(2, '0')}.html` : `#week-${w.toString().padStart(2, '0')}`,
+                status: isPublished ? "Published" : "Coming Soon"
             };
         });
 
