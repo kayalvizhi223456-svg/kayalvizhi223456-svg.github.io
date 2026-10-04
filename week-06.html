@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 - ProtoSem Journey | Kayalvizhi S</title>
+    <title>Week 6 Hub | Kayalvizhi S</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
-                extend: {
-                    colors: { ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 400: '#38bdf8', 500: '#0ea5e9', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' } },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] }
-                }
+                extend: { colors: { ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 400: '#38bdf8', 500: '#0ea5e9', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } }
             }
         }
     </script>
@@ -22,7 +19,6 @@
 </head>
 
 <body class="bg-ocean-950 text-white font-sans min-h-screen flex flex-col">
-    <!-- Navbar -->
     <nav class="w-full z-50 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800">
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html#protosem"
@@ -32,17 +28,63 @@
         </div>
     </nav>
 
-    <article class="max-w-5xl mx-auto px-4 py-32 flex-grow flex flex-col items-center justify-center"
-        data-aos="fade-up">
-        <header class="text-center">
+    <article class="max-w-5xl mx-auto px-4 py-24 flex-grow flex flex-col items-center" data-aos="fade-up">
+        <header class="text-center mb-16">
             <span class="text-ocean-400 font-bold tracking-widest uppercase text-sm mb-4 block"><i
                     class="fas fa-layer-group mr-2"></i>Phase 02 • Week 06</span>
             <h1
                 class="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300">
-                Content Pending</h1>
-            <p class="text-ocean-100/70 italic text-lg max-w-2xl mx-auto">This week's details have been cleared and are
-                currently waiting for a new update.</p>
+                Choose a Module</h1>
+            <p class="text-ocean-100/70 italic text-lg max-w-2xl mx-auto">Week 06 covers multiple distinct learning
+                modules. Select a page below to explore!</p>
         </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+            <!-- Page 1 Card -->
+            <a href="week-06-page-1.html"
+                class="block group relative overflow-hidden rounded-3xl bg-ocean-900/50 border border-ocean-800 p-10 hover:border-ocean-400 transition-all duration-300 shadow-[0_10px_30px_rgba(14,165,233,0.1)] hover:-translate-y-2">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-ocean-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+                <div class="flex flex-col items-center text-center gap-6 relative z-10">
+                    <div
+                        class="w-20 h-20 rounded-full bg-ocean-800/50 flex items-center justify-center border border-ocean-700 group-hover:bg-ocean-500/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-book-open text-3xl text-ocean-400"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-3">Page 1</h2>
+                        <p class="text-ocean-100/70">Click here to dive into the first part of the Week 06 experience.
+                        </p>
+                    </div>
+                    <span
+                        class="inline-flex items-center gap-2 text-ocean-400 font-bold text-sm uppercase tracking-wider group-hover:text-ocean-300">
+                        Explore <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Page 2 Card -->
+            <a href="week-06-page-2.html"
+                class="block group relative overflow-hidden rounded-3xl bg-ocean-900/50 border border-ocean-800 p-10 hover:border-ocean-400 transition-all duration-300 shadow-[0_10px_30px_rgba(14,165,233,0.1)] hover:-translate-y-2">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-ocean-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+                <div class="flex flex-col items-center text-center gap-6 relative z-10">
+                    <div
+                        class="w-20 h-20 rounded-full bg-ocean-800/50 flex items-center justify-center border border-ocean-700 group-hover:bg-ocean-500/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-cube text-3xl text-ocean-400"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-3">Page 2</h2>
+                        <p class="text-ocean-100/70">Click here to explore the second part of the Week 06 journey.</p>
+                    </div>
+                    <span
+                        class="inline-flex items-center gap-2 text-ocean-400 font-bold text-sm uppercase tracking-wider group-hover:text-ocean-300">
+                        Explore <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </div>
+            </a>
+        </div>
     </article>
 
     <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">

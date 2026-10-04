@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Page 1 | Kayalvizhi S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { colors: { ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 400: '#38bdf8', 500: '#0ea5e9', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ocean-950 text-white font-sans min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="w-full z-50 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="week-06.html"
+                class="text-ocean-400 hover:text-white transition-colors flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
+                &larr; Back to Week 6 Hub
+            </a>
+        </div>
+    </nav>
+
+    <article class="max-w-5xl mx-auto px-4 py-32 flex-grow flex flex-col items-center justify-center"
+        data-aos="fade-up">
+        <header class="text-center">
+            <span class="text-ocean-400 font-bold tracking-widest uppercase text-sm mb-4 block"><i
+                    class="fas fa-file-alt mr-2"></i>Phase 02 • Week 06</span>
+            <h1
+                class="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300">
+                Page 1: Content Pending</h1>
+            <p class="text-ocean-100/70 italic text-lg max-w-2xl mx-auto">This page is standing by to be filled with
+                your incredible creations!</p>
+        </header>
+    </article>
+
+    <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">
+        <p class="text-ocean-400/30 text-xs tracking-widest uppercase font-bold">Built as a learning journey. © 2026
+            Kayalvizhi S</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 20 });</script>
+</body>
+
+</html>
