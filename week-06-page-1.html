@@ -315,7 +315,8 @@
                     <div class="bg-ocean-900/80 p-6 rounded-2xl border border-ocean-700">
                         <h4
                             class="text-ocean-300 font-bold mb-4 text-sm tracking-widest uppercase flex items-center gap-2">
-                            <i class="fas fa-list-ul"></i> The design contains:</h4>
+                            <i class="fas fa-list-ul"></i> The design contains:
+                        </h4>
                         <ul class="grid grid-cols-1 gap-3 text-ocean-100/90 font-medium">
                             <li class="flex items-center gap-3"><i class="fas fa-check-circle text-ocean-400"></i> A
                                 rounded outer fruit shape.</li>
@@ -408,6 +409,75 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- 6. File Preparation -->
+        <div class="w-full mt-24">
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 relative z-10 text-center">
+                6. File Preparation</h2>
+            <p class="text-ocean-100/90 text-lg mb-10 text-center max-w-2xl mx-auto">
+                Before sending the design to the laser cutter, the design was checked and prepared in RDWorks.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Vector Cleaning -->
+                <div
+                    class="bg-ocean-900/40 p-8 rounded-3xl border border-ocean-800 shadow-lg hover:border-ocean-500 transition-colors">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><i
+                            class="fas fa-broom text-ocean-400"></i> Vector Cleaning</h3>
+                    <p class="text-ocean-100/80 leading-relaxed">
+                        Unwanted lines and unnecessary geometry were removed to make the design suitable for laser
+                        processing.
+                    </p>
+                </div>
+
+                <!-- Scaling -->
+                <div
+                    class="bg-ocean-900/40 p-8 rounded-3xl border border-ocean-800 shadow-lg hover:border-ocean-500 transition-colors">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><i
+                            class="fas fa-expand-arrows-alt text-ocean-400"></i> Scaling</h3>
+                    <p class="text-ocean-100/80 leading-relaxed">
+                        The design was positioned and scaled according to the required keychain size and available
+                        material area.
+                    </p>
+                </div>
+
+                <!-- Closed Paths -->
+                <div
+                    class="bg-ocean-900/40 p-8 rounded-3xl border border-ocean-800 shadow-lg hover:border-ocean-500 transition-colors">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><i
+                            class="fas fa-vector-square text-ocean-400"></i> Closed Paths</h3>
+                    <p class="text-ocean-100/80 leading-relaxed">
+                        The outer cutting geometry was checked to ensure that the required shapes formed appropriate
+                        closed paths for cutting.
+                    </p>
+                </div>
+
+                <!-- Removal of Duplicates -->
+                <div
+                    class="bg-ocean-900/40 p-8 rounded-3xl border border-ocean-800 shadow-lg hover:border-ocean-500 transition-colors">
+                    <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><i
+                            class="fas fa-layer-group text-ocean-400"></i> Removal of Duplicates</h3>
+                    <p class="text-ocean-100/80 leading-relaxed">
+                        Duplicate or overlapping lines were checked and removed where necessary to avoid repeated laser
+                        movement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Final File Verification -->
+            <div
+                class="bg-gradient-to-r from-ocean-900/80 to-ocean-900/40 p-10 rounded-3xl border border-ocean-700 shadow-xl relative overflow-hidden">
+                <i
+                    class="fas fa-check-double absolute -bottom-10 -right-10 text-9xl text-ocean-500/10 transform -rotate-12"></i>
+                <h3 class="text-3xl font-bold text-white mb-4 relative z-10 flex items-center gap-3"><i
+                        class="fas fa-eye text-ocean-400"></i> Final File Verification</h3>
+                <p class="text-ocean-100/90 text-lg relative z-10 font-medium leading-relaxed">
+                    The final design was visually checked in RDWorks before sending it to the machine. The final RDWorks
+                    screen showed the design positioned within the working area with separate processing layers.
+                </p>
             </div>
         </div>
     </article>
