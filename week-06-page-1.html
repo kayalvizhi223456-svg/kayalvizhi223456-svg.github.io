@@ -288,11 +288,22 @@
 
             <div
                 class="flex flex-col md:flex-row gap-10 items-center bg-ocean-900/40 p-8 rounded-3xl border border-ocean-800 shadow-xl mt-10 hover:border-ocean-500/50 transition-colors">
-                <div
-                    class="w-full md:w-5/12 aspect-square flex-shrink-0 rounded-2xl bg-[#FFE4C4]/20 border border-ocean-700 overflow-hidden shadow-lg flex items-center justify-center relative p-4 group">
-                    <img src="peach-reference.png" alt="Cute Peach Character Design"
-                        class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+
+                <!-- Image Container with Caption -->
+                <div class="w-full md:w-5/12 flex-shrink-0 flex flex-col gap-3 group">
+                    <div
+                        class="aspect-square rounded-2xl bg-[#FFE4C4]/20 border border-ocean-700 overflow-hidden shadow-lg flex items-center justify-center relative p-4 group">
+                        <img src="peach-reference.png" alt="Cute Peach Character Design"
+                            class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <!-- Caption Block -->
+                    <div
+                        class="text-center text-ocean-400/90 text-xs font-bold tracking-[0.2em] uppercase border border-ocean-800/50 rounded-xl py-2.5 bg-ocean-900/30 shadow-inner">
+                        Selected Image
+                    </div>
                 </div>
+
+                <!-- Text Right -->
                 <div class="w-full md:w-7/12">
                     <p class="text-ocean-100/90 leading-relaxed mb-8 text-lg font-medium">
                         I selected a cute fruit/apple-shaped character design for my custom keychain. This design was
@@ -383,10 +394,18 @@
                     </div>
                 </div>
 
-                <div
-                    class="w-full lg:w-5/12 rounded-2xl border border-ocean-700 overflow-hidden shadow-lg flex items-center justify-center group relative bg-white aspect-square md:aspect-auto">
-                    <img src="dxf-conversion.png" alt="DXF Wireframe of Peach"
-                        class="w-full h-full object-cover md:object-contain group-hover:scale-105 transition-transform duration-500">
+                <!-- Image Container with Caption -->
+                <div class="w-full lg:w-5/12 flex-shrink-0 flex flex-col gap-3 group">
+                    <div
+                        class="aspect-[4/3] lg:aspect-auto flex-grow rounded-2xl border border-ocean-700 overflow-hidden shadow-lg flex items-center justify-center relative bg-white p-2">
+                        <img src="dxf-conversion.png" alt="DXF Wireframe of Peach"
+                            class="w-full h-auto max-h-[400px] object-contain group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <!-- Caption Block -->
+                    <div
+                        class="text-center text-ocean-400/90 text-xs font-bold tracking-[0.2em] uppercase border border-ocean-800/50 rounded-xl py-2.5 bg-ocean-900/30 shadow-inner">
+                        DXF Wireframe Output
+                    </div>
                 </div>
 
             </div>
