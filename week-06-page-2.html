@@ -197,6 +197,89 @@
             </div>
         </div>
 
+        <!-- 3. Printer Limits & Capabilities -->
+        <div class="w-full mt-24">
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 relative z-10 text-center">
+                3. Printer Limits & Capabilities</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div
+                    class="bg-gradient-to-br from-ocean-900/50 to-ocean-950/80 p-8 rounded-3xl border border-ocean-700 shadow-xl hover:border-ocean-500/50 transition-all relative overflow-hidden group">
+                    <i
+                        class="fas fa-check-circle absolute -right-6 -bottom-6 text-9xl text-green-500/5 group-hover:text-green-500/10 transition-colors transform -rotate-12"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4 relative z-10 flex items-center gap-3"><i
+                            class="fas fa-thumbs-up text-green-400"></i> Capabilities</h3>
+                    <p class="text-ocean-100/80 leading-relaxed relative z-10">
+                        The Bambu Lab H2S successfully produced the detailed features of the skull-shaped cup, including
+                        the teeth and eye sockets. It also handled the overhanging areas around the jaw and cranium
+                        using tree supports.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-[#2a1b24] to-[#1a1c23] p-8 rounded-3xl border border-red-900/40 shadow-xl hover:border-red-500/40 transition-all relative overflow-hidden group">
+                    <i
+                        class="fas fa-exclamation-circle absolute -right-6 -bottom-6 text-9xl text-red-500/5 group-hover:text-red-500/10 transition-colors transform -rotate-12"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4 relative z-10 flex items-center gap-3"><i
+                            class="fas fa-exclamation-triangle text-red-400"></i> Limitations</h3>
+                    <div class="space-y-4 text-ocean-100/80 leading-relaxed relative z-10">
+                        <p>
+                            The main limitations observed were the visible layer lines on curved surfaces due to the 0.4
+                            mm nozzle and 0.20 mm layer height. Some overhanging areas required supports, which left
+                            small marks after removal. Very fine details smaller than the nozzle width were also
+                            difficult to reproduce accurately.
+                        </p>
+                        <p>
+                            The image-to-3D conversion produced a relatively large mesh of approximately <strong
+                                class="text-white">500,000 triangles</strong>, making the model more demanding to
+                            process in the slicer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Why the Object Cannot Be Made Subtractively -->
+        <div class="w-full mt-24 mb-16">
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 relative z-10 text-center max-w-4xl mx-auto leading-tight">
+                4. Why the Object Cannot Be Made Subtractively</h2>
+
+            <div
+                class="max-w-4xl mx-auto bg-ocean-900/40 rounded-3xl border border-ocean-700 shadow-2xl p-8 md:p-12 relative overflow-hidden">
+                <i
+                    class="fas fa-cubes absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] text-white/5"></i>
+
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-xl font-bold text-ocean-300 mb-4 uppercase tracking-widest text-sm"><i
+                                class="fas fa-project-diagram mr-2"></i> Complex Geometry</h3>
+                        <p class="text-ocean-100/90 leading-relaxed mb-6">
+                            The selected skull-shaped cup contains an internal cavity, eye-socket undercuts, an
+                            overhanging jaw and detailed teeth.
+                        </p>
+                        <p class="text-ocean-100/90 leading-relaxed">
+                            These features are difficult to manufacture using conventional subtractive methods because
+                            cutting tools require physical access to the surfaces being machined. Producing the complete
+                            shape could require multiple machining operations or splitting the object into several
+                            parts.
+                        </p>
+                    </div>
+
+                    <div class="bg-ocean-950/80 p-6 md:p-8 rounded-2xl border border-ocean-800 shadow-inner">
+                        <h3 class="text-xl font-bold text-green-400 mb-4 uppercase tracking-widest text-sm"><i
+                                class="fas fa-layer-group mr-2"></i> The Additive Advantage</h3>
+                        <p class="text-white leading-relaxed font-medium">
+                            3D printing is more suitable because the skull cup can be produced layer by layer, allowing
+                            complex cavities, undercuts and curved features to be created directly from the digital
+                            model seamlessly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </article>
 
     <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">
