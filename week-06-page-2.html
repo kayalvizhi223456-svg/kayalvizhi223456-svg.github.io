@@ -321,6 +321,135 @@
             </div>
         </div>
 
+        <!-- 7. Slicer Settings -->
+        <div class="w-full mt-32 mb-16">
+            <h2
+                class="text-4xl md:text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 relative z-10 text-center">
+                7. Slicer Settings</h2>
+
+            <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 max-w-[80rem] mx-auto items-stretch">
+                <!-- Settings Table -->
+                <div
+                    class="xl:col-span-8 bg-ocean-900/40 rounded-3xl border border-ocean-800 shadow-xl overflow-hidden hover:border-ocean-500/50 transition-colors h-full flex flex-col">
+                    <div class="bg-gradient-to-r from-ocean-950/80 to-transparent p-6 border-b border-ocean-800">
+                        <h3 class="text-xl font-bold text-ocean-300 flex items-center gap-3"><i
+                                class="fas fa-sliders-h text-ocean-400"></i> Bambu Studio Final Profile</h3>
+                        <p class="text-ocean-100/60 text-sm mt-2">Configured for Bambu Lab H2S with 0.4 mm nozzle and
+                            PLA Basic.</p>
+                    </div>
+
+                    <div class="overflow-x-auto flex-grow">
+                        <table class="w-full text-left border-collapse h-full">
+                            <thead>
+                                <tr
+                                    class="bg-ocean-800/30 text-ocean-400 font-bold uppercase tracking-wider text-[11px] border-b border-ocean-800/50">
+                                    <th class="py-3 px-6 w-1/2">Parameter</th>
+                                    <th class="py-3 px-6">Final Slicer Setting</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-ocean-100/90 divide-y divide-ocean-800/20 text-sm">
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Nozzle temperature</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">220 &deg;C</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Bed temperature</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">55 &deg;C</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Layer height</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">0.20 mm</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Infill percentage</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">15%</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Infill pattern</td>
+                                    <td class="py-2.5 px-6 text-white font-medium">Grid</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Wall/shell count</td>
+                                    <td class="py-2.5 px-6 text-ocean-100/80">2 walls</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Print speed</td>
+                                    <td class="py-2.5 px-6 text-[12px] leading-tight text-ocean-100/70 py-3">
+                                        Feature-dependent:<br><span
+                                            class="text-ocean-300 font-mono inline-block mt-1">200 mm/s outer
+                                            wall</span><br><span
+                                            class="text-ocean-300 font-mono inline-block mt-0.5">300 mm/s inner
+                                            wall</span><br><span
+                                            class="text-ocean-300 font-mono inline-block mt-0.5">350 mm/s sparse
+                                            infill</span></td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Supports</td>
+                                    <td class="py-2.5 px-6 font-bold text-[#a5d6a7]">Enabled &mdash; Tree (Auto)</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Support threshold angle</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">30&deg;</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Adhesion type</td>
+                                    <td class="py-2.5 px-6 text-ocean-100/80">Brim &mdash; Outer Only</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Brim width</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">5 mm</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Nozzle diameter</td>
+                                    <td class="py-2.5 px-6 font-mono text-ocean-100/80">0.40 mm</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Filament</td>
+                                    <td class="py-2.5 px-6 font-bold text-white">PLA Basic</td>
+                                </tr>
+                                <tr class="hover:bg-ocean-800/20 transition-colors">
+                                    <td class="py-2.5 px-6 font-semibold bg-ocean-950/10 border-r border-ocean-800/10">
+                                        Build plate</td>
+                                    <td class="py-2.5 px-6 text-ocean-100/80">Textured PEI Plate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Printer Photo -->
+                <div class="xl:col-span-4 flex flex-col gap-4">
+                    <div
+                        class="rounded-3xl bg-[#0f1115] border border-ocean-700 overflow-hidden shadow-2xl p-2 relative flex flex-col items-center justify-center h-full group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-ocean-500/0 via-ocean-500/0 to-ocean-500/10 group-hover:to-ocean-500/20 transition-colors pointer-events-none z-10">
+                        </div>
+                        <img src="printer-setup.png" alt="Researcher configuring Bambu Lab H2S Printer"
+                            class="w-full h-full object-cover max-h-[600px] xl:max-h-full rounded-2xl border border-white/5 opacity-90 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500">
+                    </div>
+                    <!-- Caption Block -->
+                    <div
+                        class="text-center text-ocean-400/90 text-[10px] font-bold tracking-[0.2em] uppercase border border-ocean-800/50 rounded-xl py-2.5 bg-ocean-900/30 shadow-inner shrink-0">
+                        Operational Setup: Bambu Lab H2S
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </article>
 
     <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">
