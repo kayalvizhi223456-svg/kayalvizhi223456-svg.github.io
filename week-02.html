@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 02 – ClubConnect | Kayalvizhi S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ocean-950 text-white font-sans min-h-screen flex flex-col selection:bg-ocean-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="w-full z-50 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800 sticky top-0">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html"
+                class="text-ocean-400 hover:text-white transition-colors flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
+                &larr; Back to Journey
+            </a>
+            <span class="text-ocean-400/60 text-xs tracking-widest uppercase font-semibold hidden sm:block">
+                Phase 01 &bull; Week 02
+            </span>
+        </div>
+    </nav>
+
+    <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
+
+        <!-- Hero Header -->
+        <header class="text-center mb-16 relative" data-aos="fade-up">
+            <div
+                class="absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-ocean-500/15 rounded-full blur-[100px] -z-10 pointer-events-none">
+            </div>
+            <span
+                class="text-ocean-400 font-bold tracking-[0.2em] uppercase text-xs mb-4 inline-flex items-center gap-2 bg-ocean-950/60 border border-ocean-800/60 px-4 py-2 rounded-full shadow-lg">
+                <i class="fas fa-mobile-screen-button text-ocean-300"></i> Phase 01 &bull; Week 02
+            </span>
+            <h1
+                class="text-4xl sm:text-6xl md:text-7xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-ocean-100 to-ocean-500 leading-tight">
+                ClubConnect 📱
+            </h1>
+            <p class="text-ocean-300 text-lg md:text-2xl font-medium max-w-2xl mx-auto">
+                One Campus. Every Club.
+            </p>
+            <p class="text-ocean-200/60 text-sm mt-3 uppercase tracking-wider font-semibold">
+                Built with MIT App Inventor 2 &bull; Kumaraguru College of Technology (KCT)
+            </p>
+        </header>
+
+        <!-- Project Overview & Problem Statement -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" data-aos="fade-up">
+            <!-- Overview -->
+            <div
+                class="bg-ocean-900/40 rounded-3xl border border-ocean-800 shadow-xl p-8 hover:border-ocean-500/50 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-ocean-500/20 text-ocean-300 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-white mb-4">Project Overview</h2>
+                    <p class="text-ocean-100/80 leading-relaxed font-light mb-4">
+                        <strong class="text-white font-semibold">ClubConnect</strong> is a role-based campus club and event management application developed using <strong class="text-ocean-300 font-semibold">MIT App Inventor 2</strong> for <strong class="text-white font-semibold">Kumaraguru College of Technology (KCT)</strong>.
+                    </p>
+                    <p class="text-ocean-100/80 leading-relaxed font-light">
+                        The application provides a unified platform for students, club coordinators, and the Office of Student Affairs (OSA) to discover clubs, submit proposals, track approvals, and manage registrations seamlessly.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Problem Statement -->
+            <div
+                class="bg-ocean-900/40 rounded-3xl border border-ocean-800 shadow-xl p-8 hover:border-ocean-500/50 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <h2 class="text-2xl font-extrabold text-white mb-4">Problem Statement</h2>
+                    <p class="text-ocean-100/80 leading-relaxed font-light mb-4">
+                        Managing multiple college clubs and events through scattered communication channels leads to information silos, manual delays, and loss of visibility across event approvals and student registrations.
+                    </p>
+                    <p class="text-ocean-100/80 leading-relaxed font-light">
+                        ClubConnect tackles these bottlenecks by consolidating the entire campus club ecosystem into one intuitive, role-based mobile application.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Objectives -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                <span class="text-ocean-400 text-2xl"><i class="fas fa-bullseye"></i></span>
+                Project Objectives
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-ocean-900/30 border border-ocean-800/80 p-6 rounded-2xl hover:border-ocean-500/50 hover:-translate-y-1 transition-all">
+                    <span class="text-ocean-400 font-mono text-xs font-bold uppercase tracking-wider block mb-2">Objective 01</span>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-compass text-ocean-400 text-sm"></i> Club Discovery
+                    </h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Provide a centralized directory for students to explore, discover, and learn about every active campus club.</p>
+                </div>
+
+                <div class="bg-ocean-900/30 border border-ocean-800/80 p-6 rounded-2xl hover:border-ocean-500/50 hover:-translate-y-1 transition-all">
+                    <span class="text-ocean-400 font-mono text-xs font-bold uppercase tracking-wider block mb-2">Objective 02</span>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-paper-plane text-ocean-400 text-sm"></i> Event Proposals
+                    </h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Empower club representatives to submit structured digital event proposals directly to administration.</p>
+                </div>
+
+                <div class="bg-ocean-900/30 border border-ocean-800/80 p-6 rounded-2xl hover:border-ocean-500/50 hover:-translate-y-1 transition-all">
+                    <span class="text-ocean-400 font-mono text-xs font-bold uppercase tracking-wider block mb-2">Objective 03</span>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-stamp text-ocean-400 text-sm"></i> OSA Approvals
+                    </h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Streamline administrative event review, feedback, and formal approval by the Office of Student Affairs.</p>
+                </div>
+
+                <div class="bg-ocean-900/30 border border-ocean-800/80 p-6 rounded-2xl hover:border-ocean-500/50 hover:-translate-y-1 transition-all">
+                    <span class="text-ocean-400 font-mono text-xs font-bold uppercase tracking-wider block mb-2">Objective 04</span>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-bullhorn text-ocean-400 text-sm"></i> Student Feed
+                    </h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Publish approved events automatically into an interactive campus feed for student registration.</p>
+                </div>
+
+                <div class="bg-ocean-900/30 border border-ocean-800/80 p-6 rounded-2xl hover:border-ocean-500/50 hover:-translate-y-1 transition-all sm:col-span-2 lg:col-span-2">
+                    <span class="text-ocean-400 font-mono text-xs font-bold uppercase tracking-wider block mb-2">Objective 05</span>
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fas fa-ticket text-ocean-400 text-sm"></i> Pass & Registration Management
+                    </h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Provide students with organized digital event registration and verifiable entry passes, eliminating paper queues.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Working Flow / Lifecycle -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                <span class="text-ocean-400 text-2xl"><i class="fas fa-arrows-spin"></i></span>
+                Application Lifecycle Flow
+            </h2>
+
+            <div class="bg-gradient-to-br from-ocean-900/40 via-ocean-950/60 to-ocean-900/40 rounded-3xl border border-ocean-800 p-8 shadow-2xl relative overflow-hidden">
+                <p class="text-ocean-200/80 text-sm mb-8 font-light">
+                    The entire event coordination cycle is modeled end-to-end across multiple stakeholder permissions:
+                </p>
+
+                <!-- Flowchart Steps -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
+                    <div class="bg-ocean-950/80 border border-ocean-700/60 rounded-2xl p-4 text-center hover:border-ocean-400 transition-colors flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-ocean-500/20 text-ocean-300 flex items-center justify-center mb-3 text-sm font-bold">1</div>
+                        <h4 class="text-xs font-bold text-white mb-1 uppercase tracking-wide">Club Proposes</h4>
+                        <p class="text-[11px] text-ocean-200/70">Club rep submits event proposal</p>
+                    </div>
+
+                    <div class="bg-ocean-950/80 border border-ocean-700/60 rounded-2xl p-4 text-center hover:border-ocean-400 transition-colors flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-ocean-500/20 text-ocean-300 flex items-center justify-center mb-3 text-sm font-bold">2</div>
+                        <h4 class="text-xs font-bold text-white mb-1 uppercase tracking-wide">OSA Reviews</h4>
+                        <p class="text-[11px] text-ocean-200/70">Administration evaluates details</p>
+                    </div>
+
+                    <div class="bg-ocean-950/80 border border-ocean-700/60 rounded-2xl p-4 text-center hover:border-ocean-400 transition-colors flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center mb-3 text-sm font-bold">3</div>
+                        <h4 class="text-xs font-bold text-white mb-1 uppercase tracking-wide">Event Approved</h4>
+                        <p class="text-[11px] text-ocean-200/70">Formal clearance granted</p>
+                    </div>
+
+                    <div class="bg-ocean-950/80 border border-ocean-700/60 rounded-2xl p-4 text-center hover:border-ocean-400 transition-colors flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-ocean-500/20 text-ocean-300 flex items-center justify-center mb-3 text-sm font-bold">4</div>
+                        <h4 class="text-xs font-bold text-white mb-1 uppercase tracking-wide">Student Feed</h4>
+                        <p class="text-[11px] text-ocean-200/70">Published to campus feed</p>
+                    </div>
+
+                    <div class="bg-ocean-950/80 border border-ocean-700/60 rounded-2xl p-4 text-center hover:border-ocean-400 transition-colors flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-ocean-500/20 text-ocean-300 flex items-center justify-center mb-3 text-sm font-bold">5</div>
+                        <h4 class="text-xs font-bold text-white mb-1 uppercase tracking-wide">Registration</h4>
+                        <p class="text-[11px] text-ocean-200/70">Students register with 1-click</p>
+                    </div>
+
+                    <div class="bg-ocean-950/80 border border-ocean-700/60 rounded-2xl p-4 text-center hover:border-ocean-400 transition-colors flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-300 flex items-center justify-center mb-3 text-sm font-bold">6</div>
+                        <h4 class="text-xs font-bold text-white mb-1 uppercase tracking-wide">Passes</h4>
+                        <p class="text-[11px] text-ocean-200/70">Access verifiable digital pass</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Grid -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                <span class="text-ocean-400 text-2xl"><i class="fas fa-layer-group"></i></span>
+                Key Application Features
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="bg-ocean-900/30 border border-ocean-800 p-6 rounded-2xl hover:border-ocean-500 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-ocean-500/10 text-ocean-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">1. Club Discovery</h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Students can browse active clubs, leadership details, and domains across engineering, arts, and sports.</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-ocean-900/30 border border-ocean-800 p-6 rounded-2xl hover:border-ocean-500 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-ocean-500/10 text-ocean-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-circle-plus"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">2. Event Proposal</h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Authorized club coordinators submit proposal drafts with date, venue, budget, and agenda.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-ocean-900/30 border border-ocean-800 p-6 rounded-2xl hover:border-ocean-500 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">3. Event Approval</h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">OSA leadership reviews submissions with status flags (Approved, Pending, or Revision Requested).</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="bg-ocean-900/30 border border-ocean-800 p-6 rounded-2xl hover:border-ocean-500 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-ocean-500/10 text-ocean-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">4. Student Event Feed</h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Approved events display dynamically in the feed with posters, schedules, and eligibility requirements.</p>
+                </div>
+
+                <!-- 5 -->
+                <div class="bg-ocean-900/30 border border-ocean-800 p-6 rounded-2xl hover:border-ocean-500 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-ocean-500/10 text-ocean-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-id-card-clip"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">5. Event Registration</h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Students quickly register for workshops, competitions, and seminars directly within the app.</p>
+                </div>
+
+                <!-- 6 & 7 -->
+                <div class="bg-ocean-900/30 border border-ocean-800 p-6 rounded-2xl hover:border-ocean-500 transition-colors group">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">6. Pass & Role-Based Access</h3>
+                    <p class="text-ocean-200/70 text-sm leading-relaxed">Unique workflows tailored for students, coordinators, and OSA with persistent digital entry passes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Table -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                <span class="text-ocean-400 text-2xl"><i class="fas fa-microchip"></i></span>
+                Technology Stack
+            </h2>
+
+            <div class="bg-ocean-900/40 rounded-3xl border border-ocean-800 shadow-xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-ocean-800 bg-ocean-950/60 text-ocean-300 text-xs uppercase tracking-wider">
+                                <th class="py-4 px-6 font-bold">Component</th>
+                                <th class="py-4 px-6 font-bold">Technology / Detail</th>
+                                <th class="py-4 px-6 font-bold">Role in Architecture</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-ocean-800/60 text-sm font-light">
+                            <tr class="hover:bg-ocean-800/30 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-white flex items-center gap-2">
+                                    <i class="fas fa-code text-ocean-400"></i> Application Development
+                                </td>
+                                <td class="py-4 px-6 text-ocean-200 font-mono font-medium">MIT App Inventor 2</td>
+                                <td class="py-4 px-6 text-ocean-200/80">Visual block programming for rapid Android prototyping</td>
+                            </tr>
+                            <tr class="hover:bg-ocean-800/30 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-white flex items-center gap-2">
+                                    <i class="fas fa-file-zipper text-ocean-400"></i> Project File
+                                </td>
+                                <td class="py-4 px-6 text-ocean-200 font-mono font-medium">ClubConnect4.aia</td>
+                                <td class="py-4 px-6 text-ocean-200/80">Complete App Inventor source architecture and screen assets</td>
+                            </tr>
+                            <tr class="hover:bg-ocean-800/30 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-white flex items-center gap-2">
+                                    <i class="fas fa-database text-ocean-400"></i> Local Data Storage
+                                </td>
+                                <td class="py-4 px-6 text-ocean-200 font-mono font-medium">TinyDB</td>
+                                <td class="py-4 px-6 text-ocean-200/80">Local persistent key-value store for user sessions, passes, and events</td>
+                            </tr>
+                            <tr class="hover:bg-ocean-800/30 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-white flex items-center gap-2">
+                                    <i class="fas fa-mobile text-ocean-400"></i> Application Type
+                                </td>
+                                <td class="py-4 px-6 text-ocean-200">Mobile Application (.apk / .aia)</td>
+                                <td class="py-4 px-6 text-ocean-200/80">Android mobile client designed for student and faculty devices</td>
+                            </tr>
+                            <tr class="hover:bg-ocean-800/30 transition-colors">
+                                <td class="py-4 px-6 font-semibold text-white flex items-center gap-2">
+                                    <i class="fas fa-shield-halved text-ocean-400"></i> Development Approach
+                                </td>
+                                <td class="py-4 px-6 text-ocean-200">Role-Based Access Architecture</td>
+                                <td class="py-4 px-6 text-ocean-200/80">Custom UI permissions for Students, Club Coordinators, and OSA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Implementation & Repository Showcase -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                <span class="text-ocean-400 text-2xl"><i class="fab fa-github"></i></span>
+                Project Implementation &amp; GitHub
+            </h2>
+
+            <div class="bg-ocean-900/40 rounded-3xl border border-ocean-800 p-8 shadow-2xl relative overflow-hidden group hover:border-ocean-600/50 transition-colors">
+                <div class="mb-6">
+                    <p class="text-ocean-100/90 leading-relaxed font-light mb-4">
+                        The project is implemented as a working mobile prototype using <strong class="text-white">MIT App Inventor 2</strong>. It includes simulated demonstration datasets, responsive screen layouts, and local data persistence via the <strong class="text-ocean-300">TinyDB</strong> component.
+                    </p>
+                    <p class="text-ocean-100/80 text-sm leading-relaxed font-light">
+                        The prototype demonstrates end-to-end functionality: discovering campus clubs, proposing new events, administrative review and approval, and issuing student registration passes.
+                    </p>
+                </div>
+
+                <!-- Image Frame -->
+                <div class="rounded-2xl overflow-hidden border border-ocean-700/80 shadow-2xl bg-ocean-950 relative group/img">
+                    <img src="week2-clubconnect.jpg" alt="ClubConnect Repository and README Showcase"
+                        class="w-full object-cover transform group-hover/img:scale-[1.02] transition-transform duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-ocean-950 via-ocean-950/80 to-transparent p-4 sm:p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                        <div>
+                            <span class="text-[10px] font-bold text-ocean-400 uppercase tracking-widest block">GitHub Repository &amp; Architecture</span>
+                            <h4 class="text-sm sm:text-base font-bold text-white">CampusConnect / ClubConnect (.aia Project)</h4>
+                        </div>
+                        <span class="text-xs bg-ocean-400 text-ocean-950 font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                            <i class="fas fa-check-circle"></i> Prototype Verified
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expected Outcome & Conclusion -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" data-aos="fade-up">
+            <!-- Expected Outcome -->
+            <div class="bg-gradient-to-br from-ocean-900/60 to-ocean-950/80 p-8 rounded-3xl border border-ocean-800 hover:border-ocean-500/50 transition-all">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-lg mb-4">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Expected Outcome</h3>
+                <p class="text-ocean-200/80 text-sm leading-relaxed font-light">
+                    ClubConnect transforms campus life by making club and event management transparent, accessible, and fast. It bridges students, club organizers, and OSA administration within one platform, eliminating paperwork and communication silos.
+                </p>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="bg-gradient-to-br from-ocean-900/60 to-ocean-950/80 p-8 rounded-3xl border border-ocean-800 hover:border-ocean-500/50 transition-all">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-lg mb-4">
+                    <i class="fas fa-flag-checkered"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Conclusion</h3>
+                <p class="text-ocean-200/80 text-sm leading-relaxed font-light">
+                    ClubConnect provides a scalable blueprint for digital campus administration. By using role-based routing and localized persistence, it lays the foundation for unified event ecosystems across higher educational institutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Meta Tag Footer Banner -->
+        <div class="bg-gradient-to-r from-ocean-950 via-ocean-900/60 to-ocean-950 p-6 rounded-2xl border border-ocean-800 text-center mb-16" data-aos="fade-up">
+            <p class="text-ocean-200/80 text-sm font-light">
+                <strong class="text-white font-semibold">Developed for:</strong> Kumaraguru College of Technology (KCT) &nbsp;&bull;&nbsp;
+                <strong class="text-white font-semibold">Platform:</strong> MIT App Inventor 2 &nbsp;&bull;&nbsp;
+                <strong class="text-white font-semibold">Storage:</strong> TinyDB (.aia)
+            </p>
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="w-full max-w-4xl mx-auto pt-10 border-t border-ocean-800/50 flex flex-col sm:flex-row gap-4 justify-between items-center"
+            data-aos="fade-up">
+            <a href="week-01.html"
+                class="inline-flex items-center gap-3 bg-ocean-900/60 hover:bg-ocean-800/60 border border-ocean-700 hover:border-ocean-500 text-ocean-300 hover:text-white font-bold py-3 px-8 rounded-full transition-all uppercase tracking-wider text-sm">
+                <i class="fas fa-arrow-left"></i> Previous: Week 01
+            </a>
+            <a href="index.html"
+                class="inline-flex items-center gap-3 bg-ocean-900/40 hover:bg-ocean-800/40 border border-ocean-700/60 text-ocean-200/70 hover:text-white font-semibold py-2.5 px-6 rounded-full transition-all uppercase tracking-wider text-xs">
+                <i class="fas fa-house"></i> Home
+            </a>
+            <a href="week-06.html"
+                class="inline-flex items-center gap-3 bg-ocean-600 hover:bg-ocean-500 text-white font-bold py-3 px-8 rounded-full shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(14,165,233,0.6)] transition-all uppercase tracking-wider text-sm transform hover:-translate-y-1">
+                Week 06 Hub <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </article>
+
+    <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">
+        <p class="text-ocean-400/30 text-xs tracking-widest uppercase font-bold">Built as a learning journey. &copy; 2026 Kayalvizhi S</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 20 });</script>
+</body>
+
+</html>
