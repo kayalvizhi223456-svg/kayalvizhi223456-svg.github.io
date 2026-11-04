@@ -350,8 +350,8 @@
             return {
                 week: w,
                 phase: w === 0 ? 1 : Math.ceil(w / 5),
-                slug: (w === 0) ? `week-00.html` : (w === 6 ? `week-06.html` : `#week-${w.toString().padStart(2, '0')}`),
-                status: (w === 0 || w === 6) ? "Published" : "Coming Soon"
+                slug: (w === 0) ? `week-00.html` : (w === 1 ? `week-01.html` : (w === 6 ? `week-06.html` : `#week-${w.toString().padStart(2, '0')}`)),
+                status: (w === 0 || w === 1 || w === 6) ? "Published" : "Coming Soon"
             };
         });
 
