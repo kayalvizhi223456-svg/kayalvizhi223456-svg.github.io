@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 01 – Design Thinking & Vision | Kayalvizhi S</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: { 50: '#f0f8ff', 100: '#e0f0fe', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e', 950: '#082f49' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ocean-950 text-white font-sans min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="w-full z-50 bg-ocean-950/90 backdrop-blur-md border-b border-ocean-800 sticky top-0">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html"
+                class="text-ocean-400 hover:text-white transition-colors flex items-center gap-2 font-bold text-sm uppercase tracking-wider">
+                &larr; Back to Journey
+            </a>
+            <span class="text-ocean-400/60 text-xs tracking-widest uppercase font-semibold hidden sm:block">Phase 01
+                &bull; Week 01</span>
+        </div>
+    </nav>
+
+    <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-grow w-full">
+
+        <!-- Hero Header -->
+        <header class="text-center mb-20 relative" data-aos="fade-up">
+            <div
+                class="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-64 bg-ocean-500/15 rounded-full blur-[100px] -z-10 pointer-events-none">
+            </div>
+            <span
+                class="text-ocean-400 font-bold tracking-[0.2em] uppercase text-xs mb-6 inline-flex items-center gap-2 bg-ocean-950/60 border border-ocean-800/60 px-4 py-2 rounded-full shadow-lg">
+                <i class="fas fa-lightbulb text-ocean-300"></i> Phase 01 &bull; Week 01
+            </span>
+            <h1
+                class="text-5xl md:text-7xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-ocean-100 to-ocean-500 leading-tight mt-4">
+                Week 01
+            </h1>
+            <p class="text-ocean-100/80 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Design Thinking &amp; Vision
+            </p>
+        </header>
+
+        <!-- Section 1: Design Thinking -->
+        <section class="mb-16" data-aos="fade-up">
+            <div class="max-w-4xl mx-auto">
+                <h2
+                    class="text-3xl md:text-4xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                    <span class="text-ocean-400 text-2xl"><i class="fas fa-brain"></i></span>
+                    Design Thinking
+                </h2>
+
+                <div
+                    class="bg-ocean-900/40 rounded-3xl border border-ocean-800 shadow-xl p-8 md:p-12 relative overflow-hidden hover:border-ocean-600/50 transition-colors group">
+                    <i
+                        class="fas fa-brain absolute -right-8 -bottom-8 text-[12rem] text-ocean-400/5 group-hover:text-ocean-400/10 transition-colors pointer-events-none"></i>
+                    <blockquote class="relative z-10">
+                        <p class="text-ocean-100/90 text-lg md:text-xl leading-relaxed font-light">
+                            Through Design Thinking I learned a crucial lesson:
+                        </p>
+                        <p
+                            class="text-2xl md:text-3xl font-extrabold text-white mt-4 mb-6 leading-snug border-l-4 border-ocean-400 pl-6">
+                            "Understand the problem before building the solution."
+                        </p>
+                        <p class="text-ocean-100/80 text-lg leading-relaxed font-light relative z-10">
+                            This framework shifted my perspective from jumping straight into building to deeply
+                            empathising with users, defining the real problem, and only then ideating solutions. It's
+                            not just a process — it's a mindset.
+                        </p>
+                    </blockquote>
+                </div>
+
+                <!-- Key Takeaway Pills -->
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <span
+                        class="bg-ocean-900/60 border border-ocean-700 text-ocean-300 text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2"><i
+                            class="fas fa-heart text-xs"></i> Empathise</span>
+                    <span
+                        class="bg-ocean-900/60 border border-ocean-700 text-ocean-300 text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2"><i
+                            class="fas fa-search text-xs"></i> Define</span>
+                    <span
+                        class="bg-ocean-900/60 border border-ocean-700 text-ocean-300 text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2"><i
+                            class="fas fa-lightbulb text-xs"></i> Ideate</span>
+                    <span
+                        class="bg-ocean-900/60 border border-ocean-700 text-ocean-300 text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2"><i
+                            class="fas fa-tools text-xs"></i> Prototype</span>
+                    <span
+                        class="bg-ocean-900/60 border border-ocean-700 text-ocean-300 text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2"><i
+                            class="fas fa-vial text-xs"></i> Test</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="w-full max-w-4xl mx-auto flex items-center gap-4 my-16" data-aos="fade-up">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent to-ocean-800"></div>
+            <span class="text-ocean-600 text-xl"><i class="fas fa-circle-nodes"></i></span>
+            <div class="flex-1 h-px bg-gradient-to-l from-transparent to-ocean-800"></div>
+        </div>
+
+        <!-- Section 2: Vision & Goals -->
+        <section class="mb-16" data-aos="fade-up">
+            <div class="max-w-4xl mx-auto">
+                <h2
+                    class="text-3xl md:text-4xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-ocean-300 flex items-center gap-3">
+                    <span class="text-ocean-400 text-2xl"><i class="fas fa-bullseye"></i></span>
+                    Vision &amp; Goals
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card: Where I Am -->
+                    <div
+                        class="bg-gradient-to-br from-ocean-900/60 to-ocean-950/80 p-8 rounded-3xl border border-ocean-800 shadow-xl hover:border-ocean-500/50 transition-all relative overflow-hidden group">
+                        <i
+                            class="fas fa-map-marker-alt absolute -right-4 -bottom-4 text-8xl text-ocean-400/5 group-hover:text-ocean-400/10 transition-colors pointer-events-none"></i>
+                        <h3 class="text-lg font-bold text-ocean-300 mb-3 flex items-center gap-2 relative z-10">
+                            <i class="fas fa-street-view text-ocean-400"></i> Where I Am
+                        </h3>
+                        <p class="text-ocean-100/80 leading-relaxed relative z-10">
+                            The Vision &amp; Goals session provided a valuable opportunity to reflect on my current
+                            position — understanding my strengths, skills, and the experiences that have shaped me so
+                            far.
+                        </p>
+                    </div>
+
+                    <!-- Card: Where I Want to Go -->
+                    <div
+                        class="bg-gradient-to-br from-[#0f2a1a] to-[#0c1a24] p-8 rounded-3xl border border-green-900/40 shadow-xl hover:border-green-500/40 transition-all relative overflow-hidden group">
+                        <i
+                            class="fas fa-rocket absolute -right-4 -bottom-4 text-8xl text-green-500/5 group-hover:text-green-500/10 transition-colors pointer-events-none"></i>
+                        <h3 class="text-lg font-bold text-green-400 mb-3 flex items-center gap-2 relative z-10">
+                            <i class="fas fa-star text-green-400"></i> Where I Want to Go
+                        </h3>
+                        <p class="text-ocean-100/80 leading-relaxed relative z-10">
+                            This session helped me chart a clear direction in my career — aligning my ambitions with
+                            actionable steps and identifying the skills I need to develop to get there.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Block -->
+                <div
+                    class="mt-8 bg-gradient-to-r from-ocean-950 to-[#12141a] rounded-3xl border border-ocean-700 p-8 md:p-10 relative overflow-hidden group hover:border-ocean-500/50 transition-colors">
+                    <i
+                        class="fas fa-compass absolute right-6 top-1/2 -translate-y-1/2 text-[8rem] text-white/5 group-hover:rotate-12 transition-transform duration-700 pointer-events-none hidden md:block"></i>
+                    <p class="text-ocean-100/90 text-lg md:text-xl leading-relaxed font-light relative z-10 max-w-3xl">
+                        This session was a turning point in how I think about my future — it wasn't just about setting
+                        goals, but about understanding the <strong class="text-white font-semibold">"why"</strong>
+                        behind them and building a meaningful career path intentionally.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <div class="w-full max-w-4xl mx-auto mt-20 pt-10 border-t border-ocean-800/50 flex flex-col sm:flex-row gap-4 justify-between items-center"
+            data-aos="fade-up">
+            <a href="index.html"
+                class="inline-flex items-center gap-3 bg-ocean-900/60 hover:bg-ocean-800/60 border border-ocean-700 hover:border-ocean-500 text-ocean-300 hover:text-white font-bold py-3 px-8 rounded-full transition-all uppercase tracking-wider text-sm">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <a href="week-06.html"
+                class="inline-flex items-center gap-3 bg-ocean-600 hover:bg-ocean-500 text-white font-bold py-3 px-8 rounded-full shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(14,165,233,0.6)] transition-all uppercase tracking-wider text-sm transform hover:-translate-y-1">
+                Week 06 Hub <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </article>
+
+    <footer class="bg-ocean-950 flex flex-col items-center py-8 text-center border-t border-ocean-900 mt-8">
+        <p class="text-ocean-400/30 text-xs tracking-widest uppercase font-bold">Built as a learning journey. &copy;
+            2026 Kayalvizhi S</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 20 });</script>
+</body>
+
+</html>
